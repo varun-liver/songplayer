@@ -31,12 +31,12 @@ public class SongplayerClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (openMenuKeyMapping.consumeClick()) {
-                if (client.gui.screen() == null) {
-                    client.gui.setScreen(new SongPlayerScreen());
+                if (client.screen == null) {
+                    client.setScreen(new SongPlayerScreen());
                 }
             }
 
-            if (client.gui.screen() instanceof SongPlayerScreen songPlayerScreen) {
+            if (client.screen instanceof SongPlayerScreen songPlayerScreen) {
                 while (playKeyMapping.consumeClick()) {
                     songPlayerScreen.playAllSongs();
                 }
