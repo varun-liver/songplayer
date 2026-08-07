@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Fabric Loom run directory (world saves, logs, downloaded assets)
+run/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings (personal, not shared)
+.claude/settings.local.json
+
+# Logs
+*.log

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "songplayer",
+  "version": "${version}",
+  "name": "songplayer",
+  "description": "hi",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/songplayer/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.songplayer.client.SongplayerDataGenerator"
+    ],
+    "client": [
+      "com.songplayer.client.SongplayerClient"
+    ],
+    "main": [
+      "com.songplayer.Songplayer"
+    ]
+  },
+  "mixins": [
+    "songplayer.mixins.json",
+    {
+      "config": "songplayer.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
